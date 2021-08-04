@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m,sap.ui.layout"
+            data-sap-ui-async="true"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-resourceroots='{
+                "sap.ui.fishtank": "./"
+            }'>
+    </script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+                var XMLView = sap.ui.view("mainView", {
+                type: sap.ui.core.mvc.ViewType.XML,
+                viewName: "sap.ui.fishtank.temperature",
+                id: "mainView"
+            });
+            XMLView.placeAt("content");
+        });
+        
+    </script>
+</body>
+</html>

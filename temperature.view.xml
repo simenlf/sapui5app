@@ -1,0 +1,43 @@
+<mvc:View
+		id="mainView"
+		controllerName="sap.ui.fishtank.temperature"
+		xmlns:l="sap.ui.layout"
+		xmlns:u="sap.ui.unified"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+		xmlns:commons="sap.suite.ui.commons"
+		xmlns:html="http://www.w3.org/1999/xhtml"
+		class="viewPadding">
+	<m:Shell>
+		<m:Page title="Aquarium Temperature">
+			<l:FixFlex>
+				<l:fixContent>
+					<m:Panel>
+						<m:content>
+							<m:HBox>
+							<m:VBox class="sapUiMediumMargin">
+								<m:Label text="Sensors" design="Bold"></m:Label>
+								<m:Label text="Inside"></m:Label>
+								<m:Label text="Outside"></m:Label>
+							</m:VBox>
+							<m:VBox class="sapUiMediumMargin">
+								<m:Label text="Current Temperature" design="Bold"></m:Label>
+								<m:Label text="{/inside}"></m:Label>
+								<m:Label text="{/outside}"></m:Label>
+							</m:VBox>
+							<m:VBox class="sapUiMediumMargin">
+								<m:Label text="Toggle Series" design="Bold"></m:Label>
+								<m:CheckBox text="inside" selected="true" select="onToggleInside" />
+								<m:CheckBox text="outside" selected="true" select="onToggleOutside" />
+							</m:VBox>
+							</m:HBox>
+						</m:content>
+					</m:Panel>
+				</l:fixContent>
+				<l:flexContent>
+				<html:div id="chartdiv" style="height:400px; background-color: white"></html:div>
+				</l:flexContent>
+			</l:FixFlex>
+		</m:Page>
+	</m:Shell>
+</mvc:View>
