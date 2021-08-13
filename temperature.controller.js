@@ -36,8 +36,8 @@ sap.ui.define(['sap/ui/core/mvc/Controller', 'sap/ui/unified/DateRange', 'sap/m/
 				if (!this.chart) {
 						var dataset;
 						// Create chart instance
-						let chart = this.chart = am4core.create("mainView--chartdiv", am4charts.XYChart);
-						
+						let chart = this.chart = am4core.create("mainView--temperature--chartdiv", am4charts.XYChart);
+
 						// Set input format for dates
 						chart.dateFormatter.inputDateFormat = "yyyy-MM-dd-H-m-s";
 						

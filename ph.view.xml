@@ -1,0 +1,33 @@
+<mvc:View
+		id="mainView"
+		controllerName="sap.ui.fishtank.ph"
+		xmlns:l="sap.ui.layout"
+		xmlns:u="sap.ui.unified"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+        height="100%"
+		xmlns:commons="sap.suite.ui.commons"
+		xmlns:html="http://www.w3.org/1999/xhtml"
+		class="viewPadding">
+    <l:FixFlex>
+        <l:fixContent>
+            <m:Panel>
+                <m:content>
+                    <m:HBox>
+                    <m:VBox class="sapUiMediumMargin">
+                        <m:Label text="Sensors" design="Bold"></m:Label>
+                        <m:Label text="pH"></m:Label>
+                    </m:VBox>
+                    <m:VBox class="sapUiMediumMargin">
+                        <m:Label text="Current pH Value" design="Bold"></m:Label>
+                        <m:Label text="{/pH}"></m:Label>
+                    </m:VBox>
+                    </m:HBox>
+                </m:content>
+            </m:Panel>
+        </l:fixContent>
+        <l:flexContent>
+        <html:div id="chartdiv" style="height:400px; background-color: white"></html:div>
+        </l:flexContent>
+    </l:FixFlex>
+</mvc:View>

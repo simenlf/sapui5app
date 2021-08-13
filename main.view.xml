@@ -1,0 +1,32 @@
+<mvc:View
+        controllerName="sap.ui.fishtank.temperature"
+		id="mainView"
+		xmlns:l="sap.ui.layout"
+		xmlns:u="sap.ui.unified"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+        height="100%"
+        displayBlock="true"
+		xmlns:commons="sap.suite.ui.commons"
+		xmlns:html="http://www.w3.org/1999/xhtml">
+    <m:App>
+        <m:Shell>
+            <m:Page>
+                <m:IconTabBar>
+                    <m:items>
+                        <m:IconTabFilter key="temperature" text="Temperature">
+                            <m:content>
+                                <mvc:XMLView viewName="sap.ui.fishtank.temperature" id="temperature" />
+                            </m:content>
+                        </m:IconTabFilter>
+                        <m:IconTabFilter key="ph" text="pH Value">
+                            <m:content>
+                                <mvc:XMLView viewName="sap.ui.fishtank.ph" id="ph"/>
+                            </m:content>
+                        </m:IconTabFilter>
+                    </m:items>
+                </m:IconTabBar>
+            </m:Page>
+        </m:Shell>
+    </m:App>
+</mvc:View>
